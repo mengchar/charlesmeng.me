@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:100&display=swap');
+
+html {
+    height: 100%;
+    background: linear-gradient(to right, #2A2A2A 0%, #2e2e2e 60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.header {
+    text-align: center;
+    font-family: Montserrat;
+    color : white;
+    
+    padding: 10%;
+    font-size: 4vw;
+    top: 50%;
+}
+
+#bio {
+    width: auto;
+    border: 1px solid white;
+    padding: 1vw;
+    margin: 20px;
+    
+}
+
+.intro {
+    font-size: 2.5vw;
+    font-family: Raleway;
+    text-align: center;
+    color: white;
+}
+.resize {
+    
+    overflow: auto;
+    object-fit: contain;
+    display: block;
+    width: 15vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: 65%;
+}
+  

@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:100&display=swap');
 
-* {
-  background-color: #2A2A2A;
+
+
+html {
+  height: 100%;
+  background: linear-gradient(to right, #2A2A2A 0%, #2e2e2e 60%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .center {
@@ -12,16 +17,15 @@
   
   padding: 15%;
   text-align: center;
-
+  
 }
 
 #container {
-
+  
   font-size: 2.5vw;
   font-family: Raleway;
   color: rgb(255, 255, 255);
-
-  margin: 0;
+  
   position: fixed;
   top: 75%;
   left: 50%;
