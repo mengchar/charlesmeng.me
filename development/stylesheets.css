@@ -1,23 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100|Raleway:100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300|Raleway:100&display=swap');
 
 
 
 html {
   height: 100%;
-  background: linear-gradient(to right, #2A2A2A 0%, #2e2e2e 60%);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom right, #2a2a2a, #1a1a1a);
 }
 
 .center {
   
   font-size: 4vw;
-  font-family: Montserrat;
+  font-family: 'Open Sans';
   color: #FFFFFF;
   
-  padding: 15%;
+
   text-align: center;
+  position: relative;
+  animation: fadeInDown 0.75s ease-out forwards;
+
   
+}
+
+@keyframes fadeInDown {
+  0% {
+    top: 10vw;
+    opacity: 0;
+  }
+
+  100% {
+    top: 15vw;
+    opacity: 1;
+
+  }
 }
 
 #container {
@@ -26,7 +40,7 @@ html {
   font-family: Raleway;
   color: rgb(255, 255, 255);
   
-  position: fixed;
+  position: absolute;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,27 +49,115 @@ html {
   text-align: center;
   display: flex;
   flex-direction: row;
+
   
 }
 
 .about {
-
-  flex: 0 1 33%;
-  color: inherit;
-  text-decoration: none;
   
+  flex: 0 1 25%;
+  color: inherit;
+  position: relative;
+  text-decoration: inherit;
+  animation: fadeInDown-Menu 1.25s ease-out forwards;
+  
+} 
+
+.about:hover {
+  color: inherit;
 }
+
+.about:before {
+  background-color: white;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s
+}
+
+.about:hover::before{
+  transform: scaleX(0.75);
+}
+
+
 
 .portfolio {
   
-  flex: 0 1 33%;
+  flex: 0 1 25%;
   color: inherit;
+  position: relative;
   text-decoration: none;
+  animation: fadeInDown-Menu 1.50s ease-out forwards;
+}
+
+.portfolio:hover {
+  color:inherit
+}
+
+.portfolio:before {
+  background-color: white;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s
+}
+
+.portfolio:hover::before{
+  transform:scaleX(.85);
 }
 
 .contact {
   
-  flex: 0 1 33%;
+  flex: 0 1 25%;
   color: inherit;
+  position: relative;
   text-decoration: none;
+  animation: fadeInDown-Menu 1.75s ease-out forwards;
+
+}
+
+.contact:hover {
+  color:inherit
+}
+
+.contact:before {
+  background-color: white;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out 0s
+}
+
+.contact:hover::before{
+  transform:scaleX(.85);
+}
+
+.separator {
+  flex: 0 1 25%;
+  color: inherit;
+}
+
+@keyframes fadeInDown-Menu {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+
+  }
 }
